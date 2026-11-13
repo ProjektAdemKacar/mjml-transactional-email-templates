@@ -1,0 +1,27 @@
+Confirm your email address
+==========================
+
+{{#if user_name}}Hi {{user_name}},{{else}}Hi there,{{/if}}
+
+Please confirm that this email address belongs to you. Once you do, your Beispiel-App account will be fully activated.
+
+Confirm email address:
+{{verify_url}}
+
+This link expires in {{expires_in_hours}} hours.
+
+Didn't sign up for Beispiel-App? Just ignore this email – no account will be activated without confirmation.
+
+Best regards,
+The Beispiel-App team
+
+----------------------------------------
+
+Questions? Email us at support@example.com.
+
+You're receiving this email because an account was created with this address on Beispiel-App.
+
+Beispiel GmbH · Musterstraße 1, 12345 Musterstadt, Deutschland
+Amtsgericht Musterstadt · HRB 00000 · Geschäftsführung: Max Mustermann
+
+Privacy policy (https://example.com/datenschutz) · Legal notice (https://example.com/impressum)

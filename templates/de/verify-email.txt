@@ -1,0 +1,27 @@
+E-Mail-Adresse bestätigen
+=========================
+
+{{#if user_name}}Hallo {{user_name}},{{else}}Hallo,{{/if}}
+
+bitte bestätige, dass diese E-Mail-Adresse dir gehört. Danach ist dein Konto bei Beispiel-App vollständig aktiv.
+
+E-Mail-Adresse bestätigen:
+{{verify_url}}
+
+Der Link ist {{expires_in_hours}} Stunden gültig.
+
+Du hast dich nicht bei Beispiel-App registriert? Dann ignoriere diese E-Mail einfach – ohne Bestätigung wird kein Konto aktiviert.
+
+Viele Grüße
+Dein Team von Beispiel-App
+
+----------------------------------------
+
+Fragen? Schreib uns an support@example.com.
+
+Du erhältst diese E-Mail, weil mit dieser Adresse ein Konto bei Beispiel-App angelegt wurde.
+
+Beispiel GmbH · Musterstraße 1, 12345 Musterstadt, Deutschland
+Amtsgericht Musterstadt · HRB 00000 · Geschäftsführung: Max Mustermann
+
+Datenschutz (https://example.com/datenschutz) · Impressum (https://example.com/impressum)

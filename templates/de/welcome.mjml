@@ -1,0 +1,145 @@
+<mjml lang="de">
+  <mj-head>
+
+    <!-- Betreff und Vorschautext kommen aus texte/<sprache>/<vorlage>.json -->
+    <mj-title>Willkommen bei Beispiel-App!</mj-title>
+    <mj-preview>Schön, dass du da bist. Hier erfährst du, wie du am besten startest.&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;</mj-preview>
+
+    <mj-attributes>
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" />
+      <mj-wrapper padding="0" />
+      <mj-section padding="0 40px" />
+      <mj-column padding="0" />
+      <mj-text color="#1F2328" font-size="16px" line-height="1.6" padding="0 0 16px 0" />
+      <mj-button background-color="#4F46E5" color="#FFFFFF" font-size="16px" font-weight="600" line-height="1.2" border-radius="6px" inner-padding="14px 28px" padding="8px 0 24px 0" align="left" />
+      <mj-divider border-color="#E3E6EA" border-width="1px" padding="8px 0 24px 0" />
+      <mj-table color="#1F2328" font-size="15px" line-height="1.5" padding="0 0 16px 0" />
+
+      <!-- Bausteine (mj-class) -->
+      <mj-class name="karte" background-color="#FFFFFF" border-radius="8px" padding="40px 0 24px 0" />
+      <mj-class name="ueberschrift" font-size="24px" line-height="1.3" font-weight="700" padding="0 0 20px 0" />
+      <mj-class name="klein" font-size="14px" line-height="1.5" color="#5B6470" />
+      <mj-class name="box" background-color="#F4F5FB" border-left="4px solid #4F46E5" border-radius="4px" padding="14px 18px" />
+      <mj-class name="box-warnung" background-color="#F4F5FB" border-left="4px solid #D97706" border-radius="4px" padding="14px 18px" />
+      <mj-class name="box-gefahr" background-color="#F4F5FB" border-left="4px solid #DC2626" border-radius="4px" padding="14px 18px" />
+      <mj-class name="box-text" font-size="14px" line-height="1.5" padding="0" />
+      <mj-class name="box-code" background-color="#F4F5FB" border-radius="6px" padding="20px 16px" />
+      <mj-class name="code" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="30px" font-weight="700" letter-spacing="6px" align="center" padding="0" />
+    </mj-attributes>
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <!-- Allgemeine Regeln -->
+    <mj-style>
+      a { color: #4F46E5; }
+      .dm-text a, .dm-gedaempft a { color: #4F46E5; }
+      .dm-gedaempft a { text-decoration: underline; }
+      @media only screen and (max-width: 480px) {
+        .inhalt > table > tbody > tr > td { padding-left: 24px !important; padding-right: 24px !important; }
+      }
+    </mj-style>
+
+    <!-- Bausteine für Tabellen und Listen – werden beim Bauen inline gesetzt (wichtig für Gmail & Co.)
+         Schlüssel-Wert-Liste:  <tr><td class="kv-k">Bezeichnung</td><td class="kv-v">Wert</td></tr>
+         Positions-Tabelle:     Kopf: pos-kopf / pos-kopf-r · Zeilen: pos-name, pos-menge, pos-preis
+         Summen:                zwischen-k / zwischen-v (z. B. Netto, USt.) · summe-k / summe-v (Gesamt)
+         Aufzählung:            <ul class="liste"><li>…</li></ul> -->
+    <mj-style inline="inline">
+      .kv-k { padding: 10px 16px 10px 0; border-bottom: 1px solid #E3E6EA; color: #5B6470; vertical-align: top; }
+      .kv-v { padding: 10px 0; border-bottom: 1px solid #E3E6EA; text-align: right; font-weight: 600; vertical-align: top; }
+      .pos-kopf { padding: 0 12px 8px 0; border-bottom: 1px solid #E3E6EA; color: #5B6470; font-size: 13px; font-weight: 600; text-align: left; }
+      .pos-kopf-r { padding: 0 0 8px 12px; border-bottom: 1px solid #E3E6EA; color: #5B6470; font-size: 13px; font-weight: 600; text-align: right; white-space: nowrap; }
+      .pos-name { padding: 12px 12px 12px 0; border-bottom: 1px solid #E3E6EA; vertical-align: top; }
+      .pos-menge { padding: 12px 0 12px 12px; border-bottom: 1px solid #E3E6EA; text-align: right; vertical-align: top; white-space: nowrap; }
+      .pos-preis { padding: 12px 0 12px 12px; border-bottom: 1px solid #E3E6EA; text-align: right; vertical-align: top; white-space: nowrap; }
+      .zwischen-k { padding: 10px 12px 0 0; color: #5B6470; }
+      .zwischen-v { padding: 10px 0 0 12px; color: #5B6470; text-align: right; white-space: nowrap; }
+      .summe-k { padding: 12px 12px 0 0; font-size: 17px; font-weight: 700; }
+      .summe-v { padding: 12px 0 0 12px; font-size: 17px; font-weight: 700; text-align: right; white-space: nowrap; }
+      .pos-info { font-size: 13px; color: #5B6470; }
+      .liste { margin: 0; padding: 0 0 0 20px; }
+      .liste li { margin: 0 0 6px 0; }
+    </mj-style>
+
+    <!-- Dark Mode: Apple Mail, iOS Mail, Outlook für Mac, Thunderbird u. a. -->
+    <mj-style>
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+      @media (prefers-color-scheme: dark) {
+        body, .dm-hintergrund, .dm-hintergrund > div { background-color: #0F1115 !important; }
+        .dm-karte, .dm-karte > table { background-color: #1A1D23 !important; background: #1A1D23 !important; }
+        .dm-box > table, .dm-box > table > tbody > tr > td { background-color: #23262F !important; background: #23262F !important; }
+        .dm-text div, .dm-text td { color: #E6E8EB !important; }
+        .dm-gedaempft div { color: #9AA3AE !important; }
+        .dm-text a, .dm-gedaempft a { color: #A5B4FC !important; }
+        .dm-linie p { border-top-color: #2C313A !important; }
+        .dm-tabelle td { border-color: #2C313A !important; }
+        .dm-tabelle .kv-k, .dm-tabelle .pos-kopf, .dm-tabelle .pos-kopf-r, .dm-tabelle .zwischen-k, .dm-tabelle .zwischen-v, .dm-tabelle .pos-info { color: #9AA3AE !important; }
+        .logo-hell { display: none !important; }
+        .logo-dunkel { display: block !important; max-height: none !important; overflow: visible !important; }
+      }
+    </mj-style>
+
+    <!-- Dark Mode: Outlook.com und Outlook-Apps (eigener Block, damit andere Clients ihn gefahrlos verwerfen) -->
+    <mj-raw>
+      <style type="text/css">
+        [data-ogsb] .dm-hintergrund, [data-ogsb] .dm-hintergrund > div { background-color: #0F1115 !important; }
+        [data-ogsb] .dm-karte, [data-ogsb] .dm-karte > table { background-color: #1A1D23 !important; }
+        [data-ogsb] .dm-box > table, [data-ogsb] .dm-box > table > tbody > tr > td { background-color: #23262F !important; }
+        [data-ogsc] .dm-text div, [data-ogsc] .dm-text td { color: #E6E8EB !important; }
+        [data-ogsc] .dm-gedaempft div { color: #9AA3AE !important; }
+        [data-ogsc] .dm-text a, [data-ogsc] .dm-gedaempft a { color: #A5B4FC !important; }
+        [data-ogsb] .dm-tabelle td { border-color: #2C313A !important; }
+        [data-ogsc] .dm-tabelle .kv-k, [data-ogsc] .dm-tabelle .pos-kopf, [data-ogsc] .dm-tabelle .pos-kopf-r, [data-ogsc] .dm-tabelle .zwischen-k, [data-ogsc] .dm-tabelle .zwischen-v, [data-ogsc] .dm-tabelle .pos-info { color: #9AA3AE !important; }
+      </style>
+    </mj-raw>
+
+  </mj-head>
+  <mj-body background-color="#F4F5F7" css-class="dm-hintergrund">
+
+    <!-- Kopfzeile: Logo aus theme.json (hell/dunkel) oder – ohne Logo – der Name als Schriftzug -->
+    <mj-section padding="32px 40px 24px 40px" css-class="inhalt">
+      <mj-column>
+
+        <mj-text css-class="dm-text nur-html" font-size="20px" font-weight="700" line-height="1.2" padding="0">Beispiel-App</mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-wrapper mj-class="karte" css-class="dm-karte">
+      <mj-section css-class="inhalt">
+        <mj-column>
+          <mj-text mj-class="ueberschrift" css-class="dm-text">Willkommen bei Beispiel-App!</mj-text>
+          <mj-text css-class="dm-text">{{#if user_name}}Hallo {{user_name}},{{else}}Hallo,{{/if}}</mj-text>
+          <mj-text css-class="dm-text">schön, dass du dabei bist. Dein Konto ist eingerichtet und du kannst sofort loslegen.</mj-text>
+          <mj-raw>{{#if next_steps}}</mj-raw>
+          <mj-text css-class="dm-text" padding="0 0 8px 0"><strong>So startest du am besten:</strong></mj-text>
+          <mj-text css-class="dm-text"><ul class="liste">{{#each next_steps}}<li>{{this}}</li>{{/each}}</ul></mj-text>
+          <mj-raw>{{/if}}</mj-raw>
+          <mj-button href="{{dashboard_url}}">Zum Dashboard</mj-button>
+          <mj-raw>{{#if help_url}}</mj-raw>
+          <mj-text css-class="dm-text">Fragen zum Einstieg? In unserer <a href="{{help_url}}" target="_blank">Hilfe</a> findest du Anleitungen zu allen Funktionen.</mj-text>
+          <mj-raw>{{/if}}</mj-raw>
+          <mj-text css-class="dm-text">Viele Grüße<br>Dein Team von Beispiel-App</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <!-- Fußzeile: Hilfe, Grund der E-Mail, Pflichtangaben (theme.json → company), Links -->
+    <mj-section padding="24px 40px 40px 40px" css-class="inhalt">
+      <mj-column>
+
+        <mj-text mj-class="klein" css-class="dm-gedaempft">Fragen? Schreib uns an <a href="mailto:support@example.com">support@example.com</a>.</mj-text>
+
+        <mj-text mj-class="klein" css-class="dm-gedaempft">Du erhältst diese E-Mail, weil du ein Konto bei Beispiel-App hast.</mj-text>
+        <mj-text mj-class="klein" css-class="dm-gedaempft" font-size="12px" padding="0 0 8px 0">Beispiel GmbH · Musterstraße 1, 12345 Musterstadt, Deutschland<br>Amtsgericht Musterstadt · HRB 00000 · Geschäftsführung: Max Mustermann</mj-text>
+
+        <mj-text mj-class="klein" css-class="dm-gedaempft" font-size="12px" padding="0"><a href="https://example.com/datenschutz" target="_blank">Datenschutz</a> · <a href="https://example.com/impressum" target="_blank">Impressum</a></mj-text>
+
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

@@ -1,0 +1,28 @@
+Willkommen bei Beispiel-App!
+============================
+
+{{#if user_name}}Hallo {{user_name}},{{else}}Hallo,{{/if}}
+
+schön, dass du dabei bist. Dein Konto ist eingerichtet und du kannst sofort loslegen.
+
+{{#if next_steps}}So startest du am besten:
+
+{{#each next_steps}}- {{this}}
+{{/each}}{{/if}}
+
+Zum Dashboard:
+{{dashboard_url}}
+
+{{#if help_url}}Fragen zum Einstieg? In unserer Hilfe ({{help_url}}) findest du Anleitungen zu allen Funktionen.{{/if}}
+
+Viele Grüße
+Dein Team von Beispiel-App
+
+Fragen? Schreib uns an support@example.com.
+
+Du erhältst diese E-Mail, weil du ein Konto bei Beispiel-App hast.
+
+Beispiel GmbH · Musterstraße 1, 12345 Musterstadt, Deutschland
+Amtsgericht Musterstadt · HRB 00000 · Geschäftsführung: Max Mustermann
+
+Datenschutz (https://example.com/datenschutz) · Impressum (https://example.com/impressum)

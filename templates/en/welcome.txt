@@ -1,0 +1,28 @@
+Welcome to Beispiel-App!
+========================
+
+{{#if user_name}}Hi {{user_name}},{{else}}Hi there,{{/if}}
+
+We're glad you're here. Your account is all set up and ready to go.
+
+{{#if next_steps}}Here's how to get started:
+
+{{#each next_steps}}- {{this}}
+{{/each}}{{/if}}
+
+Go to dashboard:
+{{dashboard_url}}
+
+{{#if help_url}}Questions about getting started? Our help center ({{help_url}}) has guides for every feature.{{/if}}
+
+Best regards,
+The Beispiel-App team
+
+Questions? Email us at support@example.com.
+
+You're receiving this email because you have an account with Beispiel-App.
+
+Beispiel GmbH · Musterstraße 1, 12345 Musterstadt, Deutschland
+Amtsgericht Musterstadt · HRB 00000 · Geschäftsführung: Max Mustermann
+
+Privacy policy (https://example.com/datenschutz) · Legal notice (https://example.com/impressum)
